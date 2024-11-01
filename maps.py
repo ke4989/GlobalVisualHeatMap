@@ -59,6 +59,7 @@ def get_map(file_path, standard_format_data):
         data = []
         for loc, value in zip(locations, df[column].values):
             if loc not in country_names:
+                country_names.append(loc)
                 value = round(float(value.split(" ")[0]), 1)
                 if loc == "Somalia":  # 地图上分为两块
                     country_names.append(loc)
@@ -66,7 +67,6 @@ def get_map(file_path, standard_format_data):
                     data.append(("Somaliland", value))
                 else:
                     loc = convert(loc, standard_format_data)
-                    country_names.append(loc)
                     data.append((loc, value))
         create_map(data, column)
 
