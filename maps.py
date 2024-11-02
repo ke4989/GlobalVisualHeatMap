@@ -1,5 +1,5 @@
 # https://github.com/pyecharts/pyecharts
-# pyecharts==1.6.1
+# pyecharts==1.9.1
 
 import pandas as pd
 from pyecharts.charts import Map
